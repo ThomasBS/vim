@@ -80,6 +80,9 @@ set number
 set history=500
 set undolevels=500
 
+" Key bindings
+inoremap ½ $
+
 """""""""""
 "
 " Functions
