@@ -51,6 +51,10 @@ set autoindent
 
 " Searching
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set nospell
 
 " Syntax
 syntax on
@@ -60,3 +64,13 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+set scrolloff=15
+
+" Viewport
+set ruler
+set number
+
+" History
+set history=500
+set undolevels=500
