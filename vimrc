@@ -79,3 +79,15 @@ set number
 " History
 set history=500
 set undolevels=500
+
+"""""""""""
+"
+" Functions
+"
+""""""""""
+
+" When editing a file always jump to latest known cursor position.
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
