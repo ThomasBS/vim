@@ -19,6 +19,7 @@ Bundle 'gmarik/vundle'
 Bundle "vim-less"
 Bundle "nanotech/jellybeans.vim"
 Bundle "groenewege/vim-less"
+Bundle "digitaltoad/vim-jade"
 
 filetype plugin indent on     " required
 "
