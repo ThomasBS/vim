@@ -20,6 +20,7 @@ Bundle "vim-less"
 Bundle "nanotech/jellybeans.vim"
 Bundle "groenewege/vim-less"
 Bundle "digitaltoad/vim-jade"
+Bundle "scrooloose/syntastic"
 
 filetype plugin indent on     " required
 "
@@ -59,6 +60,9 @@ set nospell
 
 " Syntax
 syntax on
+
+" Syntastic - Customize php settings
+let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
 " Navigation
 map <C-h> <C-w>h
