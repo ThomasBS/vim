@@ -22,6 +22,7 @@ Bundle "groenewege/vim-less"
 Bundle "digitaltoad/vim-jade"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-surround"
+Bundle "airblade/vim-gitgutter"
 
 filetype plugin indent on     " required
 "
