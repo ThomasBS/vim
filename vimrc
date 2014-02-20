@@ -84,6 +84,10 @@ set undolevels=500
 " Key bindings
 inoremap ½ $
 
+" Backup and swp
+set backupdir=~/.vim/swap
+set dir=~/.vim/swap
+
 """""""""""
 "
 " Functions
