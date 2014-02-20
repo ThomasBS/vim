@@ -21,6 +21,7 @@ Bundle "nanotech/jellybeans.vim"
 Bundle "groenewege/vim-less"
 Bundle "digitaltoad/vim-jade"
 Bundle "scrooloose/syntastic"
+Bundle "tpope/vim-surround"
 
 filetype plugin indent on     " required
 "
