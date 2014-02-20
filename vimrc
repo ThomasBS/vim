@@ -1,34 +1,24 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
+"""""""""""""""""
+"
+" Vundle specific
+"
+"""""""""""""""""
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" alternatively, pass a path where Vundle should install bundles
-"let path = '~/some/path/here'
-"call vundle#rc(path)
 
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
-" The following are examples of different formats supported.
-" Keep bundle commands between here and filetype plugin indent on.
-" scripts on GitHub repos
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" scripts from http://vim-scripts.org/vim/scripts.html
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Bundle 'file:///home/gmarik/path/to/plugin'
-" ...
+" Custom bundles
 Bundle "vim-less"
+Bundle "nanotech/jellybeans.vim"
+Bundle "groenewege/vim-less"
 
 filetype plugin indent on     " required
 "
@@ -40,3 +30,33 @@ filetype plugin indent on     " required
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+
+"""""""""""""""""
+"
+" Custom settings
+"
+"""""""""""""""""
+
+" Color
+colorscheme jellybeans
+
+" Tab options
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Indentation
+set autoindent
+
+" Searching
+set hlsearch
+
+" Syntax
+syntax on
+
+" Navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
