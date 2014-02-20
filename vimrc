@@ -23,6 +23,7 @@ Bundle "digitaltoad/vim-jade"
 Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-surround"
 Bundle "airblade/vim-gitgutter"
+Bundle "Townk/vim-autoclose"
 
 filetype plugin indent on     " required
 "
