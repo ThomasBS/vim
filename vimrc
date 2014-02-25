@@ -24,6 +24,7 @@ Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-surround"
 Bundle "airblade/vim-gitgutter"
 Bundle "Townk/vim-autoclose"
+Bundle "flazz/vim-colorschemes"
 
 filetype plugin indent on     " required
 "
@@ -42,8 +43,25 @@ filetype plugin indent on     " required
 "
 """""""""""""""""
 
+" Map leader
+let mapleader = ","
+
+" Ex
+nmap ,e :Ex
+
 " Color
-colorscheme jellybeans
+colorscheme obsidian
+
+" Always show the status line
+set laststatus=2
+
+" Bubble single lines
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+
+" Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
 
 " Tab options
 set tabstop=4
@@ -67,13 +85,13 @@ syntax on
 " Syntastic - Customize php settings
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
-" Navigation
+" Easier window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-set scrolloff=15
+set scrolloff=25
 
 " Viewport
 set ruler

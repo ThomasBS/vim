@@ -2,7 +2,7 @@ Installation
 ============
 
 -   Clone this repository into your homedir:
-    <pre><code>git clone https://github.com/qrown/vim.git ~/.vim</code></pre>
+    <pre><code>git clone https://github.com/ThomasBS/vim.git ~/.vim</code></pre>
 
 -   Remove your .vimrc file
     <pre><code>rm ~/.vimrc</code></pre>
