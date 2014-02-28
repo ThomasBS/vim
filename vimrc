@@ -52,6 +52,9 @@ nmap ,e :Ex
 " Color
 colorscheme obsidian
 
+" Add 256 colors
+set t_Co=256
+
 " Always show the status line
 set laststatus=2
 
