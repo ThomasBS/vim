@@ -16,15 +16,19 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Custom bundles
-Bundle "vim-less"
+" Bundle "vim-less"
+" Bundle "groenewege/vim-less"
+" Bundle "digitaltoad/vim-jade"
+" Bundle "tpope/vim-surround"
 Bundle "nanotech/jellybeans.vim"
-Bundle "groenewege/vim-less"
-Bundle "digitaltoad/vim-jade"
 Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-surround"
 Bundle "airblade/vim-gitgutter"
 Bundle "Townk/vim-autoclose"
 Bundle "flazz/vim-colorschemes"
+
+Bundle "tpope/vim-fugitive"
+Bundle "kien/ctrlp.vim"
+Bundle "bling/vim-airline"
 
 filetype plugin indent on     " required
 "
