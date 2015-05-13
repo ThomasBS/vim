@@ -53,7 +53,7 @@ filetype plugin indent on     " required
 let mapleader = ","
 
 " Ex
-nmap ,e :Ex
+nmap ,e :Ex<CR>
 
 " Color
 colorscheme obsidian
@@ -99,6 +99,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Easier closing tags
+imap ,,, <esc>bdwa<<esc>pa><cr></<esc>pa><esc>kA<cr>
 
 set scrolloff=25
 
