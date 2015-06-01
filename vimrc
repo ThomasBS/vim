@@ -19,8 +19,8 @@ Bundle 'gmarik/vundle'
 " Bundle "groenewege/vim-less"
 " Bundle "tpope/vim-surround"
 " Bundle "hhvm/vim-hack"
+" Bundle "vim-less"
 
-Bundle "vim-less"
 Bundle "nanotech/jellybeans.vim"
 Bundle "scrooloose/syntastic"
 Bundle "airblade/vim-gitgutter"
@@ -28,6 +28,7 @@ Bundle "Townk/vim-autoclose"
 Bundle "flazz/vim-colorschemes"
 Bundle "fatih/vim-go"
 
+Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
 Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
