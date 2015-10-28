@@ -27,10 +27,12 @@ Bundle "Townk/vim-autoclose"
 Bundle "flazz/vim-colorschemes"
 Bundle "fatih/vim-go"
 
+Bundle "james9909/stackanswers.vim"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
 Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
+
 
 filetype plugin indent on     " required
 
@@ -49,6 +51,9 @@ filetype plugin indent on     " required
 " Custom settings
 "
 """""""""""""""""
+
+" StackAnswers plugin settings
+let g:stack_filter = "top"
 
 " Map leader
 let mapleader = ","
