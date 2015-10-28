@@ -1,7 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 """""""""""""""""
 "
 " Vundle specific
@@ -34,6 +33,7 @@ Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
 
 filetype plugin indent on     " required
+
 "
 " Brief help
 " :BundleList          - list configured bundles
@@ -92,13 +92,16 @@ set nospell
 " Syntax
 syntax on
 
+" Set airline powerline fonts on
+let g:airline_powerline_fonts = 1
+
 " Syntastic - Customize php settings
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
 " Syntastic - JSCS styleguide
 " TODO: Needs to work with guldfugl.jscs.json and should look in project repo
 " instead of homefolder
-autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint’]
+autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 
 " Easier window navigation
 map <C-h> <C-w>h
