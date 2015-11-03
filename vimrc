@@ -20,6 +20,7 @@ Bundle 'gmarik/vundle'
 " Bundle "hhvm/vim-hack"
 " Bundle "vim-less"
 
+Bundle "mhinz/vim-startify"
 Bundle "nanotech/jellybeans.vim"
 Bundle "scrooloose/syntastic"
 Bundle "airblade/vim-gitgutter"
@@ -96,6 +97,10 @@ set nospell
 
 " Syntax
 syntax on
+
+" startify
+let g:startify_custom_header =
+  \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 
 " Set airline powerline fonts on
 let g:airline_powerline_fonts = 1
