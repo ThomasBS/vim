@@ -15,11 +15,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Custom bundles
-" Bundle "groenewege/vim-less"
 " Bundle "tpope/vim-surround"
 " Bundle "hhvm/vim-hack"
-" Bundle "vim-less"
 
+Bundle "mattn/emmet-vim"
+Bundle "groenewege/vim-less"
 Bundle "mhinz/vim-startify"
 Bundle "nanotech/jellybeans.vim"
 Bundle "scrooloose/syntastic"
@@ -28,7 +28,6 @@ Bundle "Townk/vim-autoclose"
 Bundle "flazz/vim-colorschemes"
 Bundle "fatih/vim-go"
 
-Bundle "james9909/stackanswers.vim"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
 Bundle "kien/ctrlp.vim"
@@ -53,8 +52,9 @@ filetype plugin indent on     " required
 "
 """""""""""""""""
 
-" StackAnswers plugin settings
-let g:stack_filter = "top"
+" Only enable emmet for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " Map leader
 let mapleader = ","
