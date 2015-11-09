@@ -56,6 +56,10 @@ filetype plugin indent on     " required
 " let g:user_emmet_install_global = 0
 " autocmd FileType html,css EmmetInstall
 
+" Custom color settings for active cursorline
+" set cursorline
+" hi CursorLineNr ctermfg=255 ctermbg=none
+
 " Map leader
 let mapleader = ","
 
