@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 " Bundle "tpope/vim-surround"
 " Bundle "hhvm/vim-hack"
 
+Bundle "zenorocha/dracula-theme"
 Bundle "scrooloose/nerdtree"
 Bundle "mattn/emmet-vim"
 Bundle "groenewege/vim-less"
