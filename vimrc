@@ -15,8 +15,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Custom bundles
-" Bundle "tpope/vim-surround"
-" Bundle "hhvm/vim-hack"
 
 " Themes
 Bundle "zenorocha/dracula-theme"
@@ -34,11 +32,13 @@ Bundle "scrooloose/syntastic"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
 Bundle "Townk/vim-autoclose"
+" Bundle "tpope/vim-surround"
 
 " Language specific
 Bundle "groenewege/vim-less"
+" Bundle "hhvm/vim-hack"
 Bundle "fatih/vim-go"
-Bundle "pangloss/vim-javascript"
+" Bundle "pangloss/vim-javascript"
 
 
 
