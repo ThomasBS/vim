@@ -18,22 +18,28 @@ Bundle 'gmarik/vundle'
 " Bundle "tpope/vim-surround"
 " Bundle "hhvm/vim-hack"
 
+" Themes
 Bundle "zenorocha/dracula-theme"
-Bundle "scrooloose/nerdtree"
-Bundle "mattn/emmet-vim"
-Bundle "groenewege/vim-less"
-Bundle "mhinz/vim-startify"
 Bundle "nanotech/jellybeans.vim"
-Bundle "scrooloose/syntastic"
-Bundle "airblade/vim-gitgutter"
-Bundle "Townk/vim-autoclose"
-Bundle "flazz/vim-colorschemes"
-Bundle "fatih/vim-go"
 
+" Misc
+Bundle "airblade/vim-gitgutter"
+Bundle "bling/vim-airline"
+Bundle "flazz/vim-colorschemes"
+Bundle "kien/ctrlp.vim"
+Bundle "mattn/emmet-vim"
+Bundle "mhinz/vim-startify"
+Bundle "scrooloose/nerdtree"
+Bundle "scrooloose/syntastic"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
-Bundle "kien/ctrlp.vim"
-Bundle "bling/vim-airline"
+Bundle "Townk/vim-autoclose"
+
+" Language specific
+Bundle "groenewege/vim-less"
+Bundle "fatih/vim-go"
+Bundle "pangloss/vim-javascript"
+
 
 
 filetype plugin indent on     " required
