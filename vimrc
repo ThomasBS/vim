@@ -121,8 +121,6 @@ let g:airline_powerline_fonts = 1
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
 " Syntastic - JSCS styleguide
-" TODO: Needs to work with guldfugl.jscs.json and should look in project repo
-" instead of homefolder
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 
 " Easier window navigation
