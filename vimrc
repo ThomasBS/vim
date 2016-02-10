@@ -33,6 +33,7 @@ Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
 Bundle "Townk/vim-autoclose"
 " Bundle "tpope/vim-surround"
+Bundle "nginx.vim"
 
 " Language specific
 Bundle "groenewege/vim-less"
