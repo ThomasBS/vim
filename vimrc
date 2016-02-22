@@ -145,6 +145,13 @@ set undolevels=500
 " Key bindings
 inoremap ½ $
 
+" Disable arrow keys
+" http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
+
 " Backup and swp
 set backupdir=~/.vim/swap
 set dir=~/.vim/swap
