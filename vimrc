@@ -28,6 +28,7 @@ Bundle "kien/ctrlp.vim"
 Bundle "mattn/emmet-vim"
 Bundle "mhinz/vim-startify"
 Bundle "scrooloose/nerdtree"
+Bundle "jistr/vim-nerdtree-tabs"
 Bundle "scrooloose/syntastic"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
@@ -120,6 +121,9 @@ let g:airline_powerline_fonts = 1
 
 " Syntastic - Customize php settings
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
+
+" nerd tree
+let g:nerdtree_tabs_open_on_console_startup=1
 
 " Syntastic - JSCS styleguide
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
