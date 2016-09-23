@@ -70,6 +70,9 @@ filetype plugin indent on     " required
 " set cursorline
 " hi CursorLineNr ctermfg=255 ctermbg=none
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Map leader
 let mapleader = ","
 
