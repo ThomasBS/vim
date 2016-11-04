@@ -163,7 +163,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger=""
 let g:UltiSnipsJumpBackwardTrigger=""
 
-set runtimepath+=/.vim/bundle/ultisnips
+set runtimepath+=~/.vim/ultisnips
 
 """""""""""
 " Functions
