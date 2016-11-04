@@ -160,8 +160,8 @@ hi CursorLineNr ctermfg=255 ctermbg=none
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger=""
-" let g:UltiSnipsJumpBackwardTrigger=""
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 set runtimepath+=~/.vim/ultisnips
 
