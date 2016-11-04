@@ -50,6 +50,9 @@ filetype plugin indent on     " required
 " let g:user_emmet_install_global = 0
 " autocmd FileType html,css EmmetInstall
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Map leader
 let mapleader = ","
 
