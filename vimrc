@@ -2,9 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 """""""""""""""""
-"
 " Vundle specific
-"
 """""""""""""""""
 
 " set the runtime path to include Vundle and initialize
@@ -21,40 +19,26 @@ Bundle "zenorocha/dracula-theme"
 Bundle "nanotech/jellybeans.vim"
 
 " Misc
+Bundle "Townk/vim-autoclose"
 Bundle "airblade/vim-gitgutter"
 Bundle "bling/vim-airline"
 Bundle "flazz/vim-colorschemes"
+Bundle "honza/vim-snippets"
+Bundle "jistr/vim-nerdtree-tabs"
 Bundle "kien/ctrlp.vim"
 Bundle "mattn/emmet-vim"
 Bundle "mhinz/vim-startify"
 Bundle "scrooloose/nerdtree"
-Bundle "jistr/vim-nerdtree-tabs"
 Bundle "scrooloose/syntastic"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
-Bundle "Townk/vim-autoclose"
-" Bundle "tpope/vim-surround"
-Bundle "nginx.vim"
 
 " Language specific
 Bundle "groenewege/vim-less"
-" Bundle "hhvm/vim-hack"
 Bundle "fatih/vim-go"
-" Bundle "pangloss/vim-javascript"
-
 
 
 filetype plugin indent on     " required
-
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
 
 """""""""""""""""
 "
@@ -66,15 +50,14 @@ filetype plugin indent on     " required
 " let g:user_emmet_install_global = 0
 " autocmd FileType html,css EmmetInstall
 
-" Custom color settings for active cursorline
-" set cursorline
-" hi CursorLineNr ctermfg=255 ctermbg=none
-
 " Map leader
 let mapleader = ","
 
 " Ex
 nmap ,e :Ex<CR>
+
+" NERDTree
+map <C-1> :NERDTreeToggle<CR>
 
 " Color
 colorscheme obsidian
@@ -123,7 +106,7 @@ let g:airline_powerline_fonts = 1
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
 " nerd tree
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=0
 
 " Syntastic - JSCS styleguide
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
@@ -161,10 +144,26 @@ inoremap ½ $
 set backupdir=~/.vim/swap
 set dir=~/.vim/swap
 
+" Custom settings for transparent background
+" hi Normal ctermbg=NONE
+" hi LineNr ctermbg=NONE
+
+" Custom color settings for active cursorline
+set cursorline
+set cursorcolumn
+set relativenumber
+hi CursorLineNr ctermfg=255 ctermbg=none
+"
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger=""
+let g:UltiSnipsJumpBackwardTrigger=""
+
+set runtimepath+=/.vim/bundle/ultisnips
+
 """""""""""
-"
 " Functions
-"
 """"""""""
 
 " When editing a file always jump to latest known cursor position.
