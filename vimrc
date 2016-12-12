@@ -21,6 +21,7 @@ Bundle "nanotech/jellybeans.vim"
 Bundle "whatyouhide/vim-gotham"
 
 " Misc
+Bundle "SirVir/ultisnips"
 Bundle "Townk/vim-autoclose"
 Bundle "airblade/vim-gitgutter"
 Bundle "bling/vim-airline"
