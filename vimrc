@@ -12,11 +12,13 @@ call vundle#rc()
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
+" Bundle 'FredKSchott/CoVim'
 " Custom bundles
 
 " Themes
 Bundle "zenorocha/dracula-theme"
 Bundle "nanotech/jellybeans.vim"
+Bundle "whatyouhide/vim-gotham"
 
 " Misc
 Bundle "Townk/vim-autoclose"
