@@ -19,6 +19,7 @@ Bundle "zenorocha/dracula-theme"
 Bundle "nanotech/jellybeans.vim"
 
 " Misc
+Bundle "SirVer/ultisnips"
 Bundle "Townk/vim-autoclose"
 Bundle "airblade/vim-gitgutter"
 Bundle "bling/vim-airline"
