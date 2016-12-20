@@ -18,4 +18,4 @@ Installation
 -   Run BundleInstall command from Vim
     <pre><code>:BundleInstall</code></pre>
 
--   Enjoy!
+-   Enjoy!!
