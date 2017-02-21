@@ -2,3 +2,5 @@ bundle
 .netrwhist
 *.swp
 .view/
+gutentags/
+tags
