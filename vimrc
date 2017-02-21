@@ -45,6 +45,121 @@ Bundle "junegunn/limelight.vim"
 Bundle "groenewege/vim-less"
 Bundle "fatih/vim-go"
 
+" PHP ENV SETUP ATTEMPT
+" (https://robertbasic.com/blog/current-vim-setup-for-php-development/)
+Bundle "bronson/vim-trailing-whitespace"
+"
+"
+" tags
+Bundle "ludovicchabant/vim-gutentags"
+" Auto use statements and namespaces
+Bundle "arnaud-lb/vim-php-namespace"
+" asynchronous lint engine
+Bundle "w0rp/ale"
+" PHP Completion daemon
+Bundle "lvht/phpcd.vim"
+
+" ==== gutentags settings ====
+" Exclude css, html, js files from generating tag files
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml', '*.go',
+                            \ '*.phar', '*.ini', '*.rst', '*.md',
+                            \ '*vendor/*/test*', '*vendor/*/Test*',
+                            \ '*vendor/*/fixture*', '*vendor/*/Fixture*',
+                            \ '*var/cache*', '*var/log*']
+" Where to store tag files
+let g:gutentags_cache_dir = '~/.vim/gutentags'
+" ==== End gutentags settings ====
+
+let g:ale_linters = {
+\   'php': ['php'],
+\}
+
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+
+" ==== vim-php-namespace settings ====
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>pnu <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>pnu :call PhpInsertUse()<CR>
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>pne <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>pne :call PhpExpandClass()<CR>
+autocmd FileType php inoremap <Leader>pns <Esc>:call PhpSortUse()<CR>
+autocmd FileType php noremap <Leader>pns :call PhpSortUse()<CR>
+let g:php_namespace_sort_after_insert=1
+
+" ==== End plugin settings ====
+
+" ==== Custom functions ====
+function! FixSyntax()
+    " nmap <silent> <leader><leader>fs :syntax sync fromstart<cr>
+    syntax sync fromstart
+endfun
+
+function! OpenTestFile()
+    let b:file = expand("%:p:r")
+    let b:root_dir = getbufvar('%', 'rootDir')
+    let b:tests_dir = b:root_dir . "/tests"
+    let b:test_file = substitute(b:file, b:root_dir, b:tests_dir, "") . "Test.php"
+    exe ":vsp " b:test_file
+endfun
+
+function! OpenTestMethodFile()
+    let b:file = expand("%:p:r")
+    let b:root_dir = getbufvar('%', 'rootDir')
+    let b:tests_dir = b:root_dir . "/tests"
+    let b:class_test_dir = substitute(b:file, b:root_dir, b:tests_dir, "")
+    let b:current_method = substitute(tagbar#currenttag('%s',''), '\(^.\)', '\u&', 'g')
+    if !isdirectory(b:class_test_dir)
+        call mkdir(b:class_test_dir, 'p')
+    endif
+    let b:test_file = b:class_test_dir . "/" . b:current_method . "Test.php"
+    exe ":vsp " b:test_file
+endfun
+
+function! CopyPasteMethodBody(from_line, to_line)
+    execute a:from_line
+    normal! yiB
+    execute a:to_line
+    normal! p
+endfun
+
+function! IndentHtmlFile()
+    set ft=html
+    normal! ggVG=<cr>
+    set ft=php
+endfun
+
+function! SectionLink()
+    exe "normal! ^wi[\elv$hyA](#)\ePvibu"
+endfun
+
+function! CreateNamespace()
+    let b:file = expand("%:p:h")
+    let b:root_dir = getbufvar('%', 'rootDir')
+    let b:class = substitute(b:file, b:root_dir . '/src', '', "")
+    let b:namespace = substitute(b:class, '/', '\\', 'g')
+    let b:namespace = substitute(b:namespace, '\\', '', '')
+    exe "normal! Inamespace " . b:namespace . ";"
+endfun
+
+" ==== End custom functions ====
+
+" Call OpenTestFile() custom function
+nnoremap <leader>otf :call OpenTestFile()<cr>
+nnoremap <leader>otmf :call OpenTestMethodFile()<cr>
+
+" ==== Automatic ====
+" Automatically change cwd to the directory of the file in the current buffer
+autocmd BufEnter * silent! lcd %:p:h
+
+" ----------------------------------------------------------------------------------------
 
 filetype plugin indent on     " required
 
