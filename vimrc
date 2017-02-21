@@ -157,7 +157,7 @@ nnoremap <leader>otmf :call OpenTestMethodFile()<cr>
 
 " ==== Automatic ====
 " Automatically change cwd to the directory of the file in the current buffer
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
 
 " ----------------------------------------------------------------------------------------
 
