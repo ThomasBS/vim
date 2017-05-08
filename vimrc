@@ -153,6 +153,9 @@ endfun
 
 " ==== End custom functions ====
 
+" Make backspace behave like normal editors
+set backspace=indent,eol,start
+
 " Call OpenTestFile() custom function
 nnoremap <leader>otf :call OpenTestFile()<cr>
 nnoremap <leader>otmf :call OpenTestMethodFile()<cr>
