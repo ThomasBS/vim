@@ -23,17 +23,17 @@ Bundle "nanotech/jellybeans.vim"
 Bundle "whatyouhide/vim-gotham"
 
 " Misc
-Bundle "SirVer/ultisnips"
+" Bundle "SirVer/ultisnips"
 Bundle "Townk/vim-autoclose"
 Bundle "airblade/vim-gitgutter"
 Bundle "bling/vim-airline"
 Bundle "flazz/vim-colorschemes"
-Bundle "honza/vim-snippets"
-Bundle "jistr/vim-nerdtree-tabs"
+" Bundle "honza/vim-snippets"
+" Bundle "jistr/vim-nerdtree-tabs"
 Bundle "kien/ctrlp.vim"
 Bundle "mattn/emmet-vim"
 Bundle "mhinz/vim-startify"
-Bundle "scrooloose/nerdtree"
+" Bundle "scrooloose/nerdtree"
 Bundle "scrooloose/syntastic"
 Bundle "terryma/vim-expand-region"
 Bundle "tpope/vim-fugitive"
@@ -44,22 +44,22 @@ Bundle "junegunn/seoul256.vim"
 Bundle "junegunn/limelight.vim"
 
 " Language specific
-Bundle "groenewege/vim-less"
-Bundle "fatih/vim-go"
+" Bundle "groenewege/vim-less"
+" Bundle "fatih/vim-go"
 
 " PHP ENV SETUP ATTEMPT
 " (https://robertbasic.com/blog/current-vim-setup-for-php-development/)
-Bundle "bronson/vim-trailing-whitespace"
+" Bundle "bronson/vim-trailing-whitespace"
 "
 "
 " tags
-Bundle "ludovicchabant/vim-gutentags"
+" Bundle "ludovicchabant/vim-gutentags"
 " Auto use statements and namespaces
-Bundle "arnaud-lb/vim-php-namespace"
+" Bundle "arnaud-lb/vim-php-namespace"
 " asynchronous lint engine
-Bundle "w0rp/ale"
+" Bundle "w0rp/ale"
 " PHP Completion daemon
-Bundle "lvht/phpcd.vim"
+" Bundle "lvht/phpcd.vim"
 
 " ==== gutentags settings ====
 " Exclude css, html, js files from generating tag files
@@ -260,6 +260,7 @@ let g:startify_custom_header =
 let g:airline_powerline_fonts = 1
 
 " Syntastic - Customize php settings
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 
 " nerd tree
