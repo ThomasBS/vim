@@ -266,6 +266,16 @@ let g:syntastic_php_phpcs_args = '--report=csv --standard=PSR2 --encoding=utf-8'
 " nerd tree
 let g:nerdtree_tabs_open_on_console_startup=0
 
+" -- make ctrlp great again! --
+" use git to exclude some files and folders
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" use persistent cache location
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+" keep cache even when exiting vim
+" let g:ctrlp_clear_cache_on_exit = 0
+" custom ignore files/folders
+let g:ctrlp_custom_ignore = {'dir': 'vendor'}
+
 " Syntastic - JSCS styleguide
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 
