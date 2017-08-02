@@ -45,7 +45,7 @@ Bundle "junegunn/limelight.vim"
 
 " Language specific
 " Bundle "groenewege/vim-less"
-" Bundle "fatih/vim-go"
+Bundle "fatih/vim-go"
 
 " PHP ENV SETUP ATTEMPT
 " (https://robertbasic.com/blog/current-vim-setup-for-php-development/)
