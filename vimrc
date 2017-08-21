@@ -43,6 +43,12 @@ Bundle "junegunn/goyo.vim"
 Bundle "junegunn/seoul256.vim"
 Bundle "junegunn/limelight.vim"
 
+" php docs
+Bundle "tobyS/pdv"
+Bundle "tobyS/vmustache"
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
+nnoremap <buffer> <C-i> :call pdv#DocumentCurrentLine()<CR>
+
 " Language specific
 " Bundle "groenewege/vim-less"
 Bundle "fatih/vim-go"
