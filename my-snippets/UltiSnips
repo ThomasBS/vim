@@ -1,0 +1,3 @@
+snippet gf_test
+    <?php
+    namespace test;

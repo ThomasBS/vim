@@ -23,12 +23,12 @@ Bundle "nanotech/jellybeans.vim"
 Bundle "whatyouhide/vim-gotham"
 
 " Misc
-" Bundle "SirVer/ultisnips"
+Bundle "SirVer/ultisnips"
 Bundle "Townk/vim-autoclose"
 Bundle "airblade/vim-gitgutter"
 Bundle "bling/vim-airline"
 Bundle "flazz/vim-colorschemes"
-" Bundle "honza/vim-snippets"
+Bundle "honza/vim-snippets"
 " Bundle "jistr/vim-nerdtree-tabs"
 Bundle "kien/ctrlp.vim"
 Bundle "mattn/emmet-vim"
@@ -320,12 +320,11 @@ set undolevels=500
 " Key bindings
 inoremap ½ $
 
-" Disable arrow keys
-" http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
-" noremap <Up> <NOP>
-" noremap <Down> <NOP>
-" noremap <Left> <NOP>
-" noremap <Right> <NOP>
+" Use arrow keys to resize windows
+ noremap <Up> <C-W>+
+ noremap <Down> <C-W>-
+ noremap <Left> 3<C-W><
+ noremap <Right> 3<C-W>>
 
 " Backup and swp
 set backupdir=~/.vim/swap
@@ -348,6 +347,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 set runtimepath+=~/.vim/ultisnips
+set runtimepath+=~/.vim/my-snippets
 
 """""""""""
 " Functions
